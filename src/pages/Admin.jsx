@@ -17,13 +17,13 @@ function Admin({ addItem }) {
       <input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
-        placeholder="Title"
+        placeholder="Item name:"
       />
 
       <input
         value={price}
         onChange={(e) => setPrice(e.target.value)}
-        placeholder="Price"
+        placeholder="Price:"
       />
 
       <button onClick={handleSubmit}>Add</button>
