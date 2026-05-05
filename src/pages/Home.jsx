@@ -1,19 +1,22 @@
+import ItemCard from "../components/ItemCard";
+
 function Home({ items, handleOrder }) {
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Menu</h1>
+    <div className="bg-gray-100 min-h-screen p-4">
 
-      {items.map((item) => (
-        <div key={item.id}>
-          <img src={item.image} width="150" />
-          <h2>{item.title}</h2>
-          <p>{item.price} AED</p>
+      <h1 className="text-2xl font-bold mb-4">
+        🍹 Menu
+      </h1>
 
-          <button onClick={() => handleOrder(item)}>
-            Order
-          </button>
-        </div>
-      ))}
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        {items.map((item) => (
+          <ItemCard
+            key={item.id}
+            item={item}
+            onOrder={handleOrder}
+          />
+        ))}
+      </div>
     </div>
   );
 }
