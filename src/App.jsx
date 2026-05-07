@@ -1,16 +1,15 @@
 import { useState, useEffect } from "react";
 import { items as initialItems } from "./data/items";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { createWhatsAppLink } from "./utils/whatsapp";
+import useLocalStorage from "./hooks/useLocalStorage";
 import Home from "./pages/Home";
 import Admin from "./pages/Admin";
 
 function App() {
 
   // Local Storage 
-  const [items, setItems] = useState(() => {
-    const saved = localStorage.getItem("items");
-    return saved ? JSON.parse(saved) : initialItems;
-  });
+  const [items, setItems] = useLocalStorage("items", initialItems);
 
   useEffect(() => {
     localStorage.setItem("items", JSON.stringify(items));
@@ -35,8 +34,8 @@ function App() {
 
   // Ordering by WhatsApp  
   const handleOrder = (item) => {
-    const message = `Hi, I want to order ${item.title}`;
-    const url = `https://wa.me/${item.whatsappNumber}?text=${encodeURIComponent(message)}`;
+    const url = createWhatsAppLink(item);
+    
     window.open(url, "_blank");
   };
 

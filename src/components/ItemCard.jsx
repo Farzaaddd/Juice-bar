@@ -8,7 +8,7 @@ function ItemCard({ item, onOrder }) {
       <img
         src={item.image}
         alt={item.title}
-        className="w-full h-40 object-cover rounded-xl mb-3"
+        className="w-full h-56 object-cover rounded-xl mb-3"
       />
 
       <h2 className="text-lg font-bold">{item.title}</h2>
