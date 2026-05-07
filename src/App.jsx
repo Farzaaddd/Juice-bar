@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { items as initialItems } from "./data/items";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import { createWhatsAppLink } from "./utils/whatsapp";
 import useLocalStorage from "./hooks/useLocalStorage";
 import Home from "./pages/Home";
@@ -56,7 +56,7 @@ const handleDeleteItem = (id) => {
 };
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           path="/"
@@ -68,7 +68,7 @@ const handleDeleteItem = (id) => {
           element={<Admin  addItem={handleAddItem} deleteItem={handleDeleteItem} editItem={handleEditItem} items={items} />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

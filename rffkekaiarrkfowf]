@@ -1,0 +1,23 @@
+[33mcommit 2f4b470c742ad62a34a45acb56fc0abb1ad6ae26[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Farzad Solaimani <farzadsolaimanii@gmail.com>
+Date:   Thu May 7 07:13:56 2026 +0400
+
+    Clean code updated and photos size and links changed
+
+[33mcommit 961b18816e7f89a31b6eff09c532fb9d44839c36[m
+Author: Farzad Solaimani <farzadsolaimanii@gmail.com>
+Date:   Tue May 5 08:24:08 2026 +0400
+
+    Some features have been added to Admin Panel such as editing, deleting. Additionally styles added via Tailwind, which makes the project more briliant. :)
+
+[33mcommit ee999d7ff04e44f42670d28733dd29a20aa5659b[m
+Author: Farzad Solaimani <farzadsolaimanii@gmail.com>
+Date:   Tue May 5 00:43:16 2026 +0400
+
+    Admin page has been added to the project.
+
+[33mcommit 74815cd656497090d2a7bee3adbb1c67062628f3[m
+Author: Farzad Solaimani <farzadsolaimanii@gmail.com>
+Date:   Tue May 5 00:39:27 2026 +0400
+
+    Running a project for odering via WhatsApp. Routes and Items have been added along with the LocalStorage
